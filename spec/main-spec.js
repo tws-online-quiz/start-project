@@ -1,15 +1,9 @@
-const main = require('../main/main');
+const add = require('../main/main');
 
 describe('main()', () => {
 
-    it('should console log "Debug Info"', () => {
-        spyOn(console, 'log');
-        main();
-        expect(console.log).toHaveBeenCalledWith('Debug Info');
-    });
-
-    it('should return "Hello World!"', () => {
-        let actual = main();
-        expect(actual).toBe('Hello World!');
+    it('should return added result', () => {
+        let actual = add(1,1);
+        expect(actual).toBe(2);
     });
 });
